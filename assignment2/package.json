@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "lodash": "^4.17.15",
+    "moment": "^2.24.0",
+    "node-sass": "^4.12.0"
+  },
+  "scripts": {
+    "build-css": "node-sass scss/main.scss css/main.css --include-path scss -w"
+  },
+  "name": "assignment1",
+  "version": "1.0.0",
+  "description": "WEB422 - Assignments",
+  "main": "index.js",
+  "author": "Vivian Chiu",
+  "license": "ISC"
+}
