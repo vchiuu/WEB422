@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Link to CSS stylesheets -->
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-header-table.css">
+    <link rel="stylesheet" href="lib/multiple-select-master/multiple-select.css">
+
+    <!-- Latest compiled and minified Bootstrap 3.3.7 CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/multiple-select/1.2.3/multiple-select.js"></script>
+    <!-- Lodash -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.15/lodash.min.js"></script>  
+    <!-- Knockout & Knockout Mapping-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.5.0/knockout-min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout.mapping/2.4.1/knockout.mapping.js"></script>
+    <!-- Multiple Select -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/multiple-select/1.2.3/multiple-select.js"></script>
+
+    <script src="js/main.js"></script>
+    
+    <title>Vivian Chiu - WEB422</title>
+</head>
+<body>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="nav-header">
+        <a class="navbar-brand" href="#"> Assignment 3 - Team Details </a>
+      </div>
+    </div>
+  </nav>
+  <div class="container">
+    <div class="row">
+      <div data-bind="visible: true, foreach: teams">
+        <div class="col-md-4">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <strong data-bind="text: TeamName"> Team Name</strong>
+              <button class="btn btn-primary btn-xs pull-right" data-bind="click: saveTeam"> Save </button>
+            </div>
+            <div class="panel-body">
+              <h5> Team Lead </h5>
+              <select class="single" data-bind="
+                value: TeamLead, 
+                options: $parent.employees,
+                optionsText: function(item) {return ko.unwrap(item.FirstName) + ' ' + ko.unwrap(item.LastName) }, 
+                optionsValue: function (item) { return item._id }">
+              </select>
+              <h5> Team Members </h5>
+              <select multiple class="multiple" data-bind="
+                options: $parent.employees, 
+                selectedOptions: Employees, 
+                optionsText: function(item) { return ko.unwrap(item.FirstName) + ' ' + ko.unwrap(item.LastName) }, 
+                optionsValue: function(item) { return item._id } "> 
+              </select>
+              <h5> Projects </h5>
+              <select multiple class="multiple" data-bind="
+                selectedOptions: Projects, 
+                options: $parent.projects, 
+                optionsText: function(item) {return item.ProjectName }, 
+                optionsValue: function(item) { return item._id }"> 
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal -->
+  <div class="modal fade" id="genericModal" tabindex="-1" role="dialog" aria-labelledby="modalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="modalTitle"><!-- jQuery Employee's First & Last Names--></h4>
+      </div>
+      <div class="modal-body" id="modalMessage">
+        <!-- jQuery to populate Employees's Address / Telephone and Hire Date -->
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+  <!-- Knockout.js and Knockout Mapping-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.5.0/knockout-min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout.mapping/2.4.1/knockout.mapping.js"></script>
+
+  <!-- Multiple Select -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/multiple-select/1.2.3/multiple-select.js"></script>
+
+  <!-- Latest compiled and minified Bootstrap 3.3.7 JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  
+</body>
+</html>
