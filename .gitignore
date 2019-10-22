@@ -1,1 +1,74 @@
 teams-api-data/node_modules
+
+# REACT - ASSIGNMENT 4 #
+
+# dependencies
+assignment4/node_modules
+assignment4/.pnp
+assignmennt4/.pnp.js
+
+# testing
+assignment4/coverage
+
+# production
+assignment4/build
+
+# misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ANGULAR - ASSIGNMENT 5 #
+assignment5/* 
+
+# compiled output
+assignment5/dist
+*/tmp
+/out-tsc
+# Only exists if Bazel was run
+/bazel-out
+
+# dependencies
+
+assignment5/node_modules
+
+# profiling files
+chrome-profiler-events*.json
+speed-measure-plugin*.json
+
+# IDEs and editors
+/.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history/*
+
+# misc
+/.sass-cache
+/connect.lock
+/coverage
+/libpeerconnection.log
+npm-debug.log
+yarn-error.log
+testem.log
+/typings
+
+# System Files
+.DS_Store
+Thumbs.db
