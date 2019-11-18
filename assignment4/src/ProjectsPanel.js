@@ -6,18 +6,18 @@ class ProjectsPanel extends Component {
   constructor(){
     super();
     this.state = {
-      projects:[]
+      projects: []
     }
   }
   componentDidMount(){
-    fetch("https://teams-api-data.herokuapp.com/projects").then(res => res.json()).then((res)=> {
+    fetch(this.dataSource).then(res => res.json()).then((res)=> {
       this.setState({
         projects: res
       });
     }).catch((err) => {
       console.log("Error: Could not find projects data");
     });
-  }
+  } 
   render(){
     return (
       <div className="panel panel-default">

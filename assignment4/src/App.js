@@ -21,7 +21,7 @@ class App extends Component {
           <Employees title="Employees" dataSource={dataSourceURL + "employees"} />
         )}/>
         <Route exact path="/teams" render={()=>(
-          <Teams title="Teams" dataSource={dataSourceURL + "projects"}/>
+          <Teams title="Teams" dataSource={dataSourceURL + "teams"}/>
         )}/>
         <Route render={()=>(
           <RouteNotFound title="Not Found" />

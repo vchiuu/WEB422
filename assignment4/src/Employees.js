@@ -11,7 +11,7 @@ class Employees extends Component {
     }
   }
   componentDidMount(){
-    fetch("https://teams-api-data.herokuapp.com/employees").then(res => res.json()).then((res)=> {
+    fetch(this.dataSource).then(res => res.json()).then((res)=> {
       this.setState({
         employees: res
       });

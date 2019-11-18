@@ -11,7 +11,7 @@ class Projects extends Component {
     }
   }
   componentDidMount(){
-    fetch("https://teams-api-data.herokuapp.com/projects").then(res => res.json()).then((res)=> {
+    fetch(this.dataSource).then(res => res.json()).then((res)=> {
       this.setState({
         projects: res
       });

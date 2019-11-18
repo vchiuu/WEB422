@@ -10,7 +10,7 @@ class Teams extends Component {
     }
   }
   componentDidMount(){
-    fetch("https://teams-api-data.herokuapp.com/teams").then(res => res.json()).then((res)=> {
+    fetch(this.dataSource).then(res => res.json()).then((res)=> {
       this.setState({
         teams: res
       });

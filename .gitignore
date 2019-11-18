@@ -25,7 +25,6 @@ yarn-debug.log*
 yarn-error.log*
 
 # ANGULAR - ASSIGNMENT 5 #
-assignment5/* 
 
 # compiled output
 assignment5/dist
