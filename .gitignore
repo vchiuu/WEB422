@@ -24,10 +24,11 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# ANGULAR - ASSIGNMENT 5 #
+# ANGULAR - ASSIGNMENT 5 & 6#
 
 # compiled output
 assignment5/dist
+assignment6/dist
 */tmp
 /out-tsc
 # Only exists if Bazel was run
@@ -36,6 +37,7 @@ assignment5/dist
 # dependencies
 
 assignment5/node_modules
+assignment6/node_modules
 
 # profiling files
 chrome-profiler-events*.json
